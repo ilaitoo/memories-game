@@ -1,0 +1,222 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: tahoma, arial;
+}
+.container {
+  display: flex;
+  margin: auto;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 900px;
+  height: 100vh;
+  overflow: hidden;
+  flex-direction: row;
+}
+.container .btn-container {
+  height: 10%;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+.container .btn-container .warnnig {
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  color: red;
+  font-size: 13px;
+  display: none;
+}
+.container .btn-container .start {
+  padding: 20px 100px;
+  background-color: rgb(82, 175, 82);
+  border: none;
+  border-radius: 4px;
+  font-size: 20px;
+  color: #ededde;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px 1px #3e803e;
+  margin: auto;
+}
+.container .btn-container #restart {
+  background-color: rgb(82, 175, 82);
+  color: #ededed;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  margin: 0px 20px 0;
+  padding: 10px;
+  box-shadow: 0px 0px 0px 1px #3e803e;
+  border-radius: 4px;
+}
+.container .header {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  height: 3%;
+}
+.container .header .timer {
+  width: 10px;
+}
+.container .images-container {
+  width: 100%;
+  height: 500px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 160px);
+  grid-template-rows: repeat(4, 160px);
+  justify-content: center;
+  align-items: center;
+  margin-top: 5px;
+  gap: 0px 20px;
+  height: 80%;
+}
+.container .images-container div {
+  background-color: #22577a;
+  transform-style: preserve-3d;
+  transform: rotateY(180deg);
+  transition: 1s;
+  width: 120px;
+  height: 120px;
+}
+.container .images-container div img {
+  backface-visibility: hidden;
+  width: 100%;
+  height: 100%;
+  transition: 1s;
+}
+.container .losing-msg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.928);
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  transition: 1s;
+}
+.container .losing-msg div {
+  width: 400px;
+  height: 200px;
+  background-color: #fca311;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .losing-msg div #gameOv {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 10px 20px;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 0px 1px 0px black, 0px 1px 1px 0px black;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+.container .losing-msg div .msg {
+  color: #14213d;
+  position: absolute;
+  top: 30%;
+}
+.container .welcoming-layout {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.928);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 1s;
+}
+.container .welcoming-layout .welcoming-container {
+  width: 500px;
+  height: 300px;
+  background-color: #fca311;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container .welcoming-layout .welcoming-container span {
+  color: #14213d;
+  position: absolute;
+  top: 20%;
+}
+.container .welcoming-layout .welcoming-container #name-warnning {
+  color: #000000;
+  position: absolute;
+  top: 36%;
+  font-size: 12px;
+  display: none;
+}
+.container .welcoming-layout .welcoming-container label {
+  margin-right: 10px;
+  color: #ffffff;
+}
+.container .welcoming-layout .welcoming-container button {
+  display: block;
+  width: 10%;
+  position: absolute;
+  bottom: 15%;
+  box-shadow: 1px 0px 1px 0px black, 0px 1px 1px 0px black;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 100px;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}
+.container .congrats-layout {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.928);
+  display: none;
+  opacity: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+  transition: 1s;
+}
+.container .congrats-layout .congrats {
+  width: 500px;
+  height: 300px;
+  background-color: #fca311;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container .congrats-layout .congrats span {
+  color: #14213d;
+  position: absolute;
+  top: 20%;
+}
+.container .congrats-layout .congrats #congrats-btn {
+  display: block;
+  width: 10%;
+  position: absolute;
+  bottom: 15%;
+  box-shadow: 1px 0px 1px 0px black, 0px 1px 1px 0px black;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 10px 100px;
+  border-radius: 4px;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="/css/style.css" /> -->
+    <link rel="stylesheet" href="/css/AiStyle.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Fruit Game</title>
+  </head>
+  <body>
+    <div id="container" class="container">
+      <div id="welcoming" class="welcoming-layout">
+        <div class="welcoming-container">
+          <span>Welcom To Fruit Memory Game!</span>
+          <div id="name-warnning">Sorry Your Name Is too Short!</div>
+          <label for="">Your Name</label>
+          <input id="nameInput" type="text" />
+          <button id="go">Go</button>
+        </div>
+      </div>
+      <div class="header">
+        <div class="player-name">Player: <span id="name"></span></div>
+        <div class="timer"><span id="timer">10s</span></div>
+        <div class="fail-counter">Tries: <span id="tries">5</span></div>
+      </div>
+      <div id="img-container" class="images-container">
+        <div><img src="images/img1.png" data-num="1" alt="" /></div>
+        <div><img src="images/img2.png" data-num="2" alt="" /></div>
+        <div><img src="images/img3.png" data-num="3" alt="" /></div>
+        <div><img src="images/img4.png" data-num="4" alt="" /></div>
+        <div><img src="images/img5.png" data-num="5" alt="" /></div>
+        <div><img src="images/img6.png" data-num="6" alt="" /></div>
+        <div><img src="images/img7.png" data-num="7" alt="" /></div>
+        <div><img src="images/img8.png" data-num="8" alt="" /></div>
+        <div><img src="images/img9.png" data-num="9" alt="" /></div>
+        <div><img src="images/img10.png" data-num="10" alt="" /></div>
+        <div><img src="images/img1.png" data-num="1" alt="" /></div>
+        <div><img src="images/img2.png" data-num="2" alt="" /></div>
+        <div><img src="images/img3.png" data-num="3" alt="" /></div>
+        <div><img src="images/img4.png" data-num="4" alt="" /></div>
+        <div><img src="images/img5.png" data-num="5" alt="" /></div>
+        <div><img src="images/img6.png" data-num="6" alt="" /></div>
+        <div><img src="images/img7.png" data-num="7" alt="" /></div>
+        <div><img src="images/img8.png" data-num="8" alt="" /></div>
+        <div><img src="images/img9.png" data-num="9" alt="" /></div>
+        <div><img src="images/img10.png" data-num="10" alt="" /></div>
+      </div>
+      <div class="btn-container">
+        <div id="warnnig" class="warnnig">Game Is Runnig!</div>
+        <button id="start" class="start">Start</button>
+        <button id="restart"><i class="fa-solid fa-rotate-right"></i></button>
+      </div>
+      <div id="losing-msg" class="losing-msg">
+        <div>
+          <span class="msg">Game Over</span>
+          <button id="gameOv">Restart</button>
+        </div>
+      </div>
+      <div id="congrats" class="congrats-layout">
+        <div class="congrats">
+          <span>Congratulations<br />You Won</span>
+          <button id="congrats-btn">Play Again</button>
+        </div>
+      </div>
+    </div>
+    <!-- <script src="js/main.js"></script> -->
+    <script src="js/aiCode.js"></script>
+    <!-- <script src="js/test.js"></script> -->
+  </body>
+</html>
